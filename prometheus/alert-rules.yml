@@ -1,0 +1,38 @@
+groups:
+  - name: swiggy-alerts
+
+    rules:
+
+      # Fires when more than 2 orders fail per minute for 1 minute
+      - alert: HighOrderFailureRate
+        expr: rate(orders_failed_total[1m]) * 60 > 2
+        for: 0m
+        labels:
+          severity: critical
+        annotations:
+          summary: "🔴 High order failure rate detected"
+          description: "More than 2 orders per minute are failing."
+
+      # Fires when payment_declined failures spike
+      - alert: PaymentDeclinedSpike
+        expr: rate(orders_failed_total{reason="payment_declined"}[1m]) * 60 > 1
+        for: 0m
+        labels:
+          severity: critical
+        annotations:
+          summary: "💳 Payment gateway issues detected"
+          description: "Payment declined rate is above 1/min. Escalate to payment team."
+
+      # Fires when HTTP error rate exceeds 5%
+      - alert: HighHttpErrorRate
+        expr: |
+          rate(http_server_requests_seconds_count{status=~"4.."}[1m])
+          /
+          rate(http_server_requests_seconds_count[1m])
+          * 100 > 5
+        for: 0m
+        labels:
+          severity: critical
+        annotations:
+          summary: "🚨 High HTTP error rate"
+          description: "More than 5% of requests are returning errors."
