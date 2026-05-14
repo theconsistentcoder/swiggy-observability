@@ -1,8 +1,0 @@
-/Users/theConsistentCoder/Projects/swiggy-observability/src/main/java/com/swiggy/observability/service/OrderService.java
-/Users/theConsistentCoder/Projects/swiggy-observability/src/main/java/com/swiggy/observability/metrics/OrderMetricsService.java
-/Users/theConsistentCoder/Projects/swiggy-observability/src/main/java/com/swiggy/observability/exception/OrderFailureException.java
-/Users/theConsistentCoder/Projects/swiggy-observability/src/main/java/com/swiggy/observability/model/OrderRequest.java
-/Users/theConsistentCoder/Projects/swiggy-observability/src/main/java/com/swiggy/observability/controller/OrderController.java
-/Users/theConsistentCoder/Projects/swiggy-observability/src/main/java/com/swiggy/observability/model/Order.java
-/Users/theConsistentCoder/Projects/swiggy-observability/src/main/java/com/swiggy/observability/MetricsConfig.java
-/Users/theConsistentCoder/Projects/swiggy-observability/src/main/java/com/swiggy/observability/ObservabilityDemoApplication.java
