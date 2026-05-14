@@ -1,7 +1,7 @@
 # 🍔 Swiggy Observability Demo
 ## Spring Boot + Micrometer + Prometheus + Grafana
 
-Full source code for the **"Observe Your Spring Boot App Like a Pro"** series
+Full source code for the **"Observe Your Spring Boot App"** series
 by [@theconsistentcoder](https://www.youtube.com/@theconsistentcoder)
 
 ---
